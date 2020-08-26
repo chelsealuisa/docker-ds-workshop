@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  app_bar:
+    build: .
+    ports:
+      - "8080:8080"
+    image: dashboard
+    command: python app_barplot.py
+
+  app_hist:
+    build: .
+    ports:
+      - "8050:8050"
+    image: dashboard 
+    command: python app_histogram.py
